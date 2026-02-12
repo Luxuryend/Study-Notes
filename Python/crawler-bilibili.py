@@ -55,7 +55,6 @@ class BilibiliCrawler:
 
 
 
-    @timer_async
     async def search(self, keyword: str) -> list:
         # Bilibili search api call
         params = {"keyword": keyword}
@@ -68,7 +67,6 @@ class BilibiliCrawler:
         return infos
 
 
-    @timer_async
     async def download_audio(self, bvid: str, title: str) -> None:
         # download audio file from Bilibili video
         url = 'https://www.bilibili.com/video/' + bvid
